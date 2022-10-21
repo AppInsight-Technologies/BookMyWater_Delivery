@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "331257094857",
+    "project_id": "bookmywater-731f9",
+    "storage_bucket": "bookmywater-731f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331257094857:android:322699a4cc6f6904062318",
+        "android_client_info": {
+          "package_name": "com.bookmywater.store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331257094857-s23okm96u091hodd95buvbrq55is41ct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bookmywater.store",
+            "certificate_hash": "88a83abce9503f89ddcaa2a2040211aded88425e"
+          }
+        },
+        {
+          "client_id": "331257094857-09p9lfh2qsb6a5hlact4pl6g6e1uptg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAY-ZhZ3jf9ntsLwdqUkUFNI73u5RACus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331257094857-09p9lfh2qsb6a5hlact4pl6g6e1uptg5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331257094857:android:d6ec4ef5f72d04a7062318",
+        "android_client_info": {
+          "package_name": "com.bookmywater_delivery.store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331257094857-09p9lfh2qsb6a5hlact4pl6g6e1uptg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAY-ZhZ3jf9ntsLwdqUkUFNI73u5RACus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331257094857-09p9lfh2qsb6a5hlact4pl6g6e1uptg5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
