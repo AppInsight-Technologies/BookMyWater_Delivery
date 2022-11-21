@@ -129,7 +129,8 @@ class _OrdersWidgetState extends StateMVC<OrdersWidget> {
       });
 
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      Provider.of<OrdersItemsList>(context,listen:false).productListApi(prefs.getString('id')).then((value) async {
+      Provider.of<OrdersItemsList>(context,listen:false).
+      productListApi(prefs.getString('id')).then((value) async {
         setState(() {
           _isloading = false;
           _futureProductList = Future.value(value);
@@ -739,7 +740,8 @@ class _OrdersWidgetState extends StateMVC<OrdersWidget> {
                                           Text(DashBoradData.recentitems[i].orderStatus.toString(),style: TextStyle(color:( DashBoradData.recentitems[i].orderStatus=="Delivered")?Theme.of(context).accentColor:Color(0xFFE96124),fontSize:14,fontWeight: FontWeight.w600),),
                                           SizedBox(width: 2,),
                                           Image.asset(
-                                            DashBoradData.recentitems[i].img,
+                                           DashBoradData.recentitems[i].img,
+                                            // 'assets/img/default_product.png',
                                            // fit: BoxFit.fill,
                                            // color: ( DashBoradData.recentitems[i].orderStatus=="Delivered")?Theme.of(context).accentColor:Color(0xFFE96124),
                                             width: 15.0,

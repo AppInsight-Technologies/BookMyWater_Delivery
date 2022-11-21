@@ -1027,6 +1027,12 @@ class _OrderWidgetState extends StateMVC<OrderWidget> {
             "mobile": _mobile,
           }
       );
+      print("restaurant/delivery-boy-status url..."+url.toString());
+      print("Param"+{ // await keyword is used to wait to this operation is complete.
+        "id": _orderid,
+        "status": "1",
+        "mobile": _mobile,
+      }.toString());
       final responseJson = json.decode(response.body);
       debugPrint(responseJson.toString());
       if(responseJson['status'].toString() == "200") {

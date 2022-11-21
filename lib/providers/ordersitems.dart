@@ -193,6 +193,7 @@ class OrdersItemsList with ChangeNotifier {
         for(int i = 0; i < recentData.length; i++) {
           var delivery = "";
           var img;
+          print("jhgfddfg...."+recentData[i]['orderStatus'].toString());
           if(recentData[i]['orderStatus'].toString()=="dispatched"){
             delivery = "Assigned";
             img =Images.recieved;
@@ -208,6 +209,9 @@ class OrdersItemsList with ChangeNotifier {
           }else if(recentData[i]['orderStatus'].toString()=="cancelled"){
             delivery = "Cancelled";
             img =Images.recieved;
+          }else if(recentData[i]['orderStatus'].toString()=="completed"){
+            delivery = "Completed";
+            img =Images.delivered;
           }
           var orderType ="";
           if(recentData[i]['orderType'].toString()=="Delivery"){
@@ -215,6 +219,7 @@ class OrdersItemsList with ChangeNotifier {
           }else {
             orderType= "Express Delivery";
           }
+          print("hjfgh..."+img.toString());
           _recentitems.add(OrdersFields(
             orderid: recentData[i]['id'].toString(),
             address: recentData[i]['address'].toString(),
@@ -229,6 +234,7 @@ class OrdersItemsList with ChangeNotifier {
             orderStatus: delivery,
               orderType:/*recentData[i]['orderType'].toString()*/orderType,
             otp: (recentData[i]['otp'].toString() != "null") ? recentData[i]['otp'].toString() : "0",
+
             img:img,
           ));
         }
@@ -512,6 +518,12 @@ class OrdersItemsList with ChangeNotifier {
             "mobile": mobile,
           }
       );
+      print("restaurant/delivery-boy-status after delivery..."+url.toString());
+      print("Params..."+{ // await keyword is used to wait to this operation is complete.
+        "id": orderid,
+        "status": "4",
+        "mobile": mobile,
+      }.toString());
       final responseJson = json.decode(response.body);
       /*if(responseJson.toString() != "[]"){
 
@@ -1078,6 +1090,12 @@ class OrdersItemsList with ChangeNotifier {
         "type": "0"//(type == "wallet") ? "0" : "3",
         // await keyword is used to wait to this operation is complete.
       });
+      print("Wallet(Cash in hand url)...."+url.toString());
+      print("Params......"+{
+        "userId": prefs.getString('id'),//PrefUtils.prefs.getString('userID'),
+        "type": "0"//(type == "wallet") ? "0" : "3",
+        // await keyword is used to wait to this operation is complete.
+      }.toString());
       final responseJson = json.decode(utf8.decode(response.bodyBytes));
       _cashitems.clear();
       debugPrint("walletlog..."+responseJson.toString());
